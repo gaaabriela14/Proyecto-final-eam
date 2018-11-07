@@ -1,16 +1,24 @@
 let moongoose = require('mongoose');
 let Schema = moongoose.Schema;
 
-let PlaceSchema = Schema({
+let UserSchema = Schema({
 name: {
     type: String,
     requeried: true
 },
-description: {
+lastname: {
     type: String,
     requeried: true
 },
-location:{
+adress:{
+    type: String,
+    requeried: true
+},
+email:{
+    type: String,
+    requeried: true
+},
+phone:{
     type: String,
     requeried: true
 }
@@ -19,4 +27,4 @@ location:{
     versionKey: false
 });
 
-module.exports = moongoose.model('Place', PlaceSchema);
+module.exports = moongoose.model('User', UserSchema);
